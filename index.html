@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomyamKung Food Order App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TomyamKung Menu</h1>
+            <p>Select items to add to your order</p>
+        </header>
+        
+        <main>
+            <div class="menu-container">
+                <h2>Menu Categories</h2>
+                
+                <!-- Set Menu Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('setMenu')">
+                        <h3>Set Menu</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="setMenu">
+                        <!-- Set menu items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Appetizers Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('appetizers')">
+                        <h3>Appetizers & Side Dishes</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="appetizers">
+                        <!-- Appetizer items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Tomyam Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('tomyam')">
+                        <h3>Tomyam</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="tomyam">
+                        <!-- Tomyam items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Chicken Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('chicken')">
+                        <h3>Ayam (Chicken)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="chicken">
+                        <!-- Chicken items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Beef Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('beef')">
+                        <h3>Daging (Beef)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="beef">
+                        <!-- Beef items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Prawn Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('prawn')">
+                        <h3>Udang (Prawn)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="prawn">
+                        <!-- Prawn items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Squid Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('squid')">
+                        <h3>Sotong (Squid)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="squid">
+                        <!-- Squid items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Fish Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('fish')">
+                        <h3>Ikan Siakap (Sea Bass Fish)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="fish">
+                        <!-- Fish items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Vegetables Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('vegetables')">
+                        <h3>Sayur (Vegetables)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="vegetables">
+                        <!-- Vegetable items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Egg Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('egg')">
+                        <h3>Telur (Egg)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="egg">
+                        <!-- Egg items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Rice & Noodles Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('rice')">
+                        <h3>Nasi Goreng & Pad Kra Pao</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="rice">
+                        <!-- Rice items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Noodles Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('noodles')">
+                        <h3>Mee (Noodles)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="noodles">
+                        <!-- Noodle items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Kuetiau Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('kuetiau')">
+                        <h3>Kuetiau (Flat Rice Noodles)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="kuetiau">
+                        <!-- Kuetiau items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Add-ons Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('addons')">
+                        <h3>Add-ons</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="addons">
+                        <!-- Add-on items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Desserts Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('desserts')">
+                        <h3>Desserts</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="desserts">
+                        <!-- Dessert items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Thai Tea & Special Drinks Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('thaiTea')">
+                        <h3>Thai Tea & Special Drinks</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="thaiTea">
+                        <!-- Thai tea items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Hot Drinks Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('hotDrinks')">
+                        <h3>Hot Drinks</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="hotDrinks">
+                        <!-- Hot drink items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Cold Drinks Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('coldDrinks')">
+                        <h3>Cold Drinks</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="coldDrinks">
+                        <!-- Cold drink items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Juices Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('juices')">
+                        <h3>Juices</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="juices">
+                        <!-- Juice items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Jug Drinks Section -->
+                <div class="menu-section">
+                    <div class="section-header" onclick="toggleSection('jugDrinks')">
+                        <h3>Jug Drinks</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="section-content" id="jugDrinks">
+                        <!-- Jug drink items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-container">
+                <h2>Your Order</h2>
+                <div class="order-items" id="orderItems">
+                    <!-- Order items will appear here -->
+                    <p id="emptyOrder">Your order is empty</p>
+                </div>
+                
+                <div class="order-summary">
+                    <div class="total">
+                        <h3>Total:</h3>
+                        <h3 id="totalAmount">RM0.00</h3>
+                    </div>
+                    <button id="placeOrderBtn">Place Order</button>
+                    <button id="clearOrderBtn">Clear Order</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
